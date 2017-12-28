@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainConfigWnd</class>
+ <widget class="QMainWindow" name="MainConfigWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>308</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainConfigWnd</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(122, 122, 122);
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_19">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_14">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="configTitleLabel">
+            <property name="styleSheet">
+             <string notr="true">color:black;</string>
+            </property>
+            <property name="text">
+             <string>参数设置</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_52">
+            <property name="text">
+             <string>选择路径</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="CurrentPathEdit">
+            <property name="toolTip">
+             <string>当前配置文件的路径</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SelectFileBtn">
+            <property name="toolTip">
+             <string>选择配置文件的路径</string>
+            </property>
+            <property name="text">
+             <string>......</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane{
+border-width:1px;border-color:rgb(48, 104, 151);
+border-style: outset;background-color: rgb(132, 171, 208);
+background: transparent;}
+QTabWidget::tab-bar{
+border-width:0px;
+}
+QTabBar::tab{
+border-bottom-color: #C2C7CB;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+max-width: 75px; min-width:75px; min-height:25px;
+font:13px;
+padding: 0px;
+}
+QTabBar::scroller {
+width:25;
+border:0;
+padding: 0px;
+}
+QTabBar QToolButton::right-arrow {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/rightbtn.png);
+}
+QTabBar QToolButton::right-arrow:hover {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/hoverrightbtn.png);
+}
+QTabBar QToolButton::right-arrow:disabled {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/grayrightbtn.png);
+}
+QTabBar QToolButton::left-arrow {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/leftbtn.png);
+}
+QTabBar QToolButton::left-arrow:hover {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/hoverleftbtn.png);
+}
+QTabBar QToolButton::left-arrow:disabled {
+background-color:rgb(132, 171, 208);
+border-width: 0;
+background-image: url(:/images/tab/grayleftbtn.png);
+}
+QTabBar::tab:first:selected {
+margin-left: 30; margin-right: 0;
+color: rgb(0, 170, 0);
+border-image: url(:/images/tab/sel3.png);
+}
+QTabBar::tab:first:!selected {
+color: black;
+margin-left: 30; margin-right: 0;
+border-image: url(:/images/tab/normal3.png);
+}
+QTabBar::tab:first:hover:!selected {
+color: black;
+margin-left: 30; margin-right: 0;
+border-image: url(:/images/tab/hover3.png);
+}
+QTabBar::tab:middle:selected {
+margin-top: 0; margin-left: -15; margin-right: 8;
+color: rgb(0, 170, 0);
+border-image: url(:/images/tab/sel3.png);
+}
+QTabBar::tab:middle:!selected {
+color: black;
+margin-top: 0; margin-left: -15; margin-right: 8;
+border-image: url(:/images/tab/normal3.png);
+}
+QTabBar::tab:middle:hover:!selected {
+color: black;
+margin-top: 0; margin-left: -15; margin-right: 8;
+border-image: url(:/images/tab/hover3.png);
+}
+QTabBar::tab:last:selected {
+margin-top: 0px; margin-left: 0; margin-right: 0;
+color: rgb(0, 170, 0);
+border-image: url();
+}
+QTabBar::tab:last:!selected {
+color:  black;
+margin-top: 0; margin-left: 0; margin-right: 0;
+border-image: url();
+}
+QTabBar::tab:last:hover:!selected {
+color: black;
+margin-top: 0; margin-left: 0; margin-right: 0;
+border-image: url();
+}
+QTabBar::tab:only-one {
+margin: 0;
+};</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>常用配置</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_20">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>2</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_59">
+                <property name="text">
+                 <string>加载等待时间：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="downloadSleepTime1Edit">
+                <property name="toolTip">
+                 <string>加载等待时间</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_60">
+                <property name="text">
+                 <string>加载时间间隔：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="downloadSleepInterval1Edit">
+                <property name="toolTip">
+                 <string>加载时间间隔</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_61">
+                <property name="text">
+                 <string>加载线程数目：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="downloadThreadCount1Edit">
+                <property name="toolTip">
+                 <string>加载线程数目，大小可根据本机的处理器数目进行合理设定，一般要比处理器数目少2个</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_62">
+                <property name="text">
+                 <string>限制进程内存大小：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="maxMemorySize1Edit">
+                <property name="toolTip">
+                 <string>限制进程内存大小</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_63">
+                <property name="text">
+                 <string>每帧卸载内存大小：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="maxReclaimMemoryPerFrame1Edit">
+                <property name="toolTip">
+                 <string>每一帧卸载内存大小</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_64">
+                <property name="text">
+                 <string>模型显示效果性能：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="computerPerformance1Edit">
+                <property name="toolTip">
+                 <string>模型显示效果等级，分为low、normal、high，一般设为normal</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_66">
+                <property name="text">
+                 <string>模型加载最大显示高度：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLineEdit" name="maxVisibleHeight1Edit">
+                <property name="toolTip">
+                 <string>模型加载最大可视高度</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_74">
+                <property name="text">
+                 <string>资源生命周期：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QLineEdit" name="maxLifeTime1Edit">
+                <property name="toolTip">
+                 <string>资源的生命周期，包括纹理、Mesh</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_11">
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>2</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="1" column="3">
+               <widget class="QComboBox" name="zoomCenter1ComboBox">
+                <property name="toolTip">
+                 <string>是否开启中心点功能，默认是开启</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QComboBox" name="enableFly1ComboBox">
+                <property name="toolTip">
+                 <string>是否开启飞行功能，默认是开启</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>能</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="label_69">
+                <property name="text">
+                 <string>显示中心点：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_70">
+                <property name="text">
+                 <string>开启导航：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_67">
+                <property name="text">
+                 <string>默认纹理：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_68">
+                <property name="text">
+                 <string>能否飞行：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QComboBox" name="showNavigator1ComboBox">
+                <property name="toolTip">
+                 <string>是否开启导航功能。默认是开启</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="useDefaultTexture1ComboBox">
+                <property name="toolTip">
+                 <string>是否使用默认纹理，默认是不使用</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_71">
+                <property name="text">
+                 <string>显示LOGO：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QComboBox" name="showLogo1ComboBox">
+                <property name="toolTip">
+                 <string>是否显示LOGO，默认是显示</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="debugModel1ComboBox">
+                <property name="toolTip">
+                 <string>是否开启debug模式，可显示相关小信息</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_75">
+                <property name="text">
+                 <string>显示小信息：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_65">
+                <property name="text">
+                 <string>开启灯光：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QComboBox" name="lightEnable1ComboBox">
+                <property name="toolTip">
+                 <string>是否开启管道灯光，默认是开启</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_72">
+                <property name="text">
+                 <string>显示进度条：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QComboBox" name="showInformation1ComboBox">
+                <property name="toolTip">
+                 <string>是否显示进度条，默认是显示</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_73">
+                <property name="text">
+                 <string>中英文切换：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QComboBox" name="informationLanguage1ComboBox">
+                <property name="toolTip">
+                 <string>能否开启中英文切换功能，默认是开启</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>能</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="4" column="2" colspan="2">
+               <widget class="QPushButton" name="enableCommonConfigBtn">
+                <property name="text">
+                 <string>启用常用配置</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>推荐配置</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QToolBox" name="toolBox">
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolBox::tab {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+border-radius: 5px;
+color: black;
+}
+QToolBox::tab:selected { 
+font: italic;
+color: white;
+background-color: rgb(0, 170, 0);
+}</string>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <property name="tabSpacing">
+               <number>2</number>
+              </property>
+              <widget class="QWidget" name="page">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>266</width>
+                 <height>164</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>网络</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>6</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="text">
+                     <string>加载等待时间：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="text">
+                     <string>加载线程数目：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="downloadSleepTimeEdit">
+                    <property name="toolTip">
+                     <string>加载等待时间</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_3">
+                    <property name="text">
+                     <string>加载等待间隔：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="downloadSleepIntervalEdit">
+                    <property name="toolTip">
+                     <string>加载时间间隔</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="downloadThreadCountEdit">
+                    <property name="toolTip">
+                     <string>加载线程数目，大小可根据本机的处理器数目进行合理设定，一般要比处理器数目少2个</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>167</width>
+                 <height>215</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>资源</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>限制进程内存大小：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="maxMemorySizeEdit">
+                    <property name="toolTip">
+                     <string>限制进程内存大小</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>资源生命周期：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="maxLifeTimeEdit">
+                    <property name="toolTip">
+                     <string>资源生命周期，包括纹理、Mesh</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>最大纹理创建个数：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="maxTexSizePerBatchEdit">
+                    <property name="toolTip">
+                     <string>最大纹理创建个数</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_9">
+                    <property name="text">
+                     <string>最大网格创建个数：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="maxMeshSizePerBatchEdit">
+                    <property name="toolTip">
+                     <string>最大Mesh创建个数</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_10">
+                    <property name="text">
+                     <string>DOM数据：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="maxTexCountPerBatchEdit">
+                    <property name="toolTip">
+                     <string>DOM数据</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>创建网格个数：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLineEdit" name="maxMeshCountPerBatchEdit">
+                    <property name="toolTip">
+                     <string>创建Mesh个数</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_12">
+                    <property name="text">
+                     <string>DEM数据：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QLineEdit" name="maxTerrianCountPerBatchEdit">
+                    <property name="toolTip">
+                     <string>DEM数据</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>每帧卸载内存大小：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QLineEdit" name="maxReclaimMemoryPerFrameEdit">
+                    <property name="toolTip">
+                     <string>每一帧卸载内存大小</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>259</width>
+                 <height>260</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>渲染</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_3">
+                  <property name="spacing">
+                   <number>2</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_13">
+                    <property name="text">
+                     <string>最大时间间隔：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="maxFPSEdit">
+                    <property name="toolTip">
+                     <string>最大的时间间隔，主要用在定时器中，间隔多久发生一个事件</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>模型显示效果性能：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="computerPerformanceEdit">
+                    <property name="toolTip">
+                     <string>模型的性能高低中，即显示效果，包括low、normal、high</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_15">
+                    <property name="text">
+                     <string>采样类型：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="mutilSampleTypeEdit">
+                    <property name="toolTip">
+                     <string>采样类型，一般为4、8、16</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_16">
+                    <property name="text">
+                     <string>硬件定时器：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QComboBox" name="hardwareTimerComboBox">
+                    <property name="toolTip">
+                     <string>时器类型，0 WM_TIMER，1 HARDWARE_TIMER</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>WM_TIMER</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>HANDWARE_TIMER</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_17">
+                    <property name="text">
+                     <string>USM数据有无拓扑结构：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QComboBox" name="generateTopologicComboBox">
+                    <property name="toolTip">
+                     <string>usm数据有无拓扑信息，一般设为无</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>无</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>有</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_18">
+                    <property name="text">
+                     <string>是否保留缓存：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QComboBox" name="remainRawBufferComboBox">
+                    <property name="toolTip">
+                     <string>是否保留缓存，一般设为否</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_20">
+                    <property name="text">
+                     <string>是否有灯光：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QComboBox" name="lightEnableComboBox">
+                    <property name="toolTip">
+                     <string>是否开启灯光功能，暂时只针对管道，一般设为开启</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="label_5">
+                    <property name="text">
+                     <string>每帧渲染时间限制：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QLineEdit" name="maxFrameTimeEdit">
+                    <property name="toolTip">
+                     <string>每一帧渲染时间限制</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="0">
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>是否显示小信息：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="1">
+                   <widget class="QComboBox" name="debugModeComboBox">
+                    <property name="toolTip">
+                     <string>是否开启debug模式，显示小信息，一般设为否</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="9" column="0">
+                   <widget class="QLabel" name="label_53">
+                    <property name="text">
+                     <string>DEM渲染模式：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="1">
+                   <widget class="QComboBox" name="terrainRenderModeComboBox">
+                    <property name="toolTip">
+                     <string>DEM渲染模式的选择，分为面、网格</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>面</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>网格</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="10" column="0">
+                   <widget class="QLabel" name="label_54">
+                    <property name="text">
+                     <string>更新时间限制：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="1">
+                   <widget class="QLineEdit" name="updateIntervalEdit">
+                    <property name="toolTip">
+                     <string>更新时间限制，时间越大更新越慢</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>197</width>
+                 <height>352</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>建筑物</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_21">
+                    <property name="text">
+                     <string>建筑物最大可视范围：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="maxVisRangeEdit">
+                    <property name="toolTip">
+                     <string>建筑物的最大可视范围</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_22">
+                    <property name="text">
+                     <string>建筑物最小可视范围：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="minVisRangeEdit">
+                    <property name="toolTip">
+                     <string>建筑物的最小可视范围</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_23">
+                    <property name="text">
+                     <string>建筑物是否考虑光照：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_24">
+                    <property name="text">
+                     <string>透明颜色1：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="transparentColorEdit">
+                    <property name="toolTip">
+                     <string>透明的颜色1，用来创建纹理</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_25">
+                    <property name="text">
+                     <string>透明颜色2：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="transparentColor2Edit">
+                    <property name="toolTip">
+                     <string>透明的颜色2，用来创建纹理</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_26">
+                    <property name="text">
+                     <string>模型加载最大显示高度：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLineEdit" name="maxVisibleHeightEdit">
+                    <property name="toolTip">
+                     <string>模型加载最大可视高度</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_27">
+                    <property name="text">
+                     <string>透明起始值：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QLineEdit" name="transparentBeginEdit">
+                    <property name="toolTip">
+                     <string>透明的起始值，是颜色的a值；原来的值加上该值即为最终a值</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="label_28">
+                    <property name="text">
+                     <string>透明终止值：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QLineEdit" name="transparentEndEdit">
+                    <property name="toolTip">
+                     <string>透明的终止值，是颜色的a值；原来的值加上该值即为最终a值</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="0">
+                   <widget class="QLabel" name="label_29">
+                    <property name="text">
+                     <string>材质水平：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="1">
+                   <widget class="QLineEdit" name="materialLevelsEdit">
+                    <property name="toolTip">
+                     <string>取值1,2或者其他，1渲染纹理1,2渲染纹理2,其他值不渲染</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="0">
+                   <widget class="QLabel" name="label_30">
+                    <property name="text">
+                     <string>纹理偏爱：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="1">
+                   <widget class="QLineEdit" name="textureBiasEdit">
+                    <property name="toolTip">
+                     <string>纹理偏爱</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="0">
+                   <widget class="QLabel" name="label_55">
+                    <property name="text">
+                     <string>模型渲染：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="1">
+                   <widget class="QLineEdit" name="modelRenderBiosEdit">
+                    <property name="toolTip">
+                     <string>主要用于计算lod的级别</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="11" column="0">
+                   <widget class="QLabel" name="label_56">
+                    <property name="text">
+                     <string>Lod第二级显示距离：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="11" column="1">
+                   <widget class="QLineEdit" name="lodSecDistanceEdit">
+                    <property name="toolTip">
+                     <string>LOD第二级显示距离</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="0">
+                   <widget class="QLabel" name="label_57">
+                    <property name="text">
+                     <string>是否默认纹理：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="12" column="1">
+                   <widget class="QComboBox" name="useDefaultTextureComboBox">
+                    <property name="toolTip">
+                     <string>是否使用默认纹理，一般设为否</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QComboBox" name="newBuildingComboBox">
+                    <property name="toolTip">
+                     <string>与建筑物的阴影有关系，是考虑了光照</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>173</width>
+                 <height>222</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>链接</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_31">
+                    <property name="text">
+                     <string>资源文件相对路径：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="resFolderEdit">
+                    <property name="toolTip">
+                     <string>res的文件夹相对路径</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_32">
+                    <property name="text">
+                     <string>数据连接路径：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="connectionEdit">
+                    <property name="toolTip">
+                     <string>连接的data.xml路径</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_33">
+                    <property name="text">
+                     <string>角色资源连接路径：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="roleResConnectionEdit">
+                    <property name="toolTip">
+                     <string>角色资源的连接路径</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_34">
+                    <property name="text">
+                     <string>服务器IP：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="AIServerEdit">
+                    <property name="toolTip">
+                     <string>服务器IP</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_35">
+                    <property name="text">
+                     <string>服务器端口号：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="AIServerPortEdit">
+                    <property name="toolTip">
+                     <string>服务器端口号</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_36">
+                    <property name="text">
+                     <string>服务器许可：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLineEdit" name="licenseServerEdit">
+                    <property name="toolTip">
+                     <string>服务的license</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_37">
+                    <property name="text">
+                     <string>管线服务器：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QLineEdit" name="pipelineServerEdit">
+                    <property name="toolTip">
+                     <string>管线服务器</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="label_58">
+                    <property name="text">
+                     <string>日志路径：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QLineEdit" name="debugLogPathEdit">
+                    <property name="toolTip">
+                     <string>日志路径</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>133</width>
+                 <height>98</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>角色</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_12">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <layout class="QGridLayout" name="gridLayout_6">
+                    <property name="horizontalSpacing">
+                     <number>0</number>
+                    </property>
+                    <property name="verticalSpacing">
+                     <number>5</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_38">
+                      <property name="text">
+                       <string>角色走速度：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="roleWalkVolocityEdit">
+                      <property name="toolTip">
+                       <string>角色走的速度</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_39">
+                      <property name="text">
+                       <string>角色跑速度：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="roleRunVolocityEdit">
+                      <property name="toolTip">
+                       <string>角色跑的速度</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_40">
+                      <property name="text">
+                       <string>地下模式：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QComboBox" name="underGroundModeComboBox">
+                      <property name="toolTip">
+                       <string>是否开启地下模式，一般设为否</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>否</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>是</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_7">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>156</width>
+                 <height>73</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>浏览</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <layout class="QGridLayout" name="gridLayout_7">
+                    <property name="horizontalSpacing">
+                     <number>0</number>
+                    </property>
+                    <property name="verticalSpacing">
+                     <number>5</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_41">
+                      <property name="text">
+                       <string>是否显示中心点：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QComboBox" name="zoomCenterComboBox">
+                      <property name="toolTip">
+                       <string>是否开启显示中心点功能，一般设为是</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>否</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>是</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_42">
+                      <property name="text">
+                       <string>能否飞行：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QComboBox" name="enableFlyComboBox">
+                      <property name="toolTip">
+                       <string>是否开启飞行功能，一般设为是</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>否</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>能</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_8">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>154</width>
+                 <height>115</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>界面</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_8">
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_43">
+                    <property name="text">
+                     <string>是否开启导航：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QComboBox" name="showNavigatorComboBox">
+                    <property name="toolTip">
+                     <string>是否开启导航功能，一般设为是</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_44">
+                    <property name="text">
+                     <string>是否显示LOGO：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QComboBox" name="showLogoComboBox">
+                    <property name="toolTip">
+                     <string>是否开启显示LOGO功能，一般设为是</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_45">
+                    <property name="text">
+                     <string>是否显示进度条：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QComboBox" name="showInformationComboBox">
+                    <property name="toolTip">
+                     <string>是否开启显示进度条功能，一般设为是</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_46">
+                    <property name="text">
+                     <string>是否中英文切换：</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QComboBox" name="informationLanguageComboBox">
+                    <property name="toolTip">
+                     <string>是否开启中英文切换功能，一般设为是</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>否</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>是</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>高级配置</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>系统信息</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_17">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <property name="leftMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="horizontalSpacing">
+                  <number>2</number>
+                 </property>
+                 <property name="verticalSpacing">
+                  <number>3</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_47">
+                   <property name="text">
+                    <string>处理器个数：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="processorNumberEdit">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_48">
+                   <property name="text">
+                    <string>可用物理内存：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="availablePhysicalMemoryEdit">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_49">
+                   <property name="text">
+                    <string>物理内存使用率：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLineEdit" name="MemoryLoadEdit">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_50">
+                   <property name="text">
+                    <string>物理内存总量：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLineEdit" name="TotalPhysEdit">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string>效果优化</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_15">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <layout class="QGridLayout" name="gridLayout_10">
+                 <property name="leftMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>2</number>
+                 </property>
+                 <property name="spacing">
+                  <number>2</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_51">
+                   <property name="text">
+                    <string>模型显示效果性能：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_76">
+                   <property name="text">
+                    <string>加载等待时间：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="downloadSleepTime2Edit">
+                   <property name="toolTip">
+                    <string>加载等待时间</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_77">
+                   <property name="text">
+                    <string>加载时间间隔：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLineEdit" name="downloadSleepInterval2Edit">
+                   <property name="toolTip">
+                    <string>加载时间间隔</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_78">
+                   <property name="text">
+                    <string>加载线程数目：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLineEdit" name="downloadThreadCount2Edit">
+                   <property name="toolTip">
+                    <string>加载线程数目，大小是根据本机的处理器个数设定的，一般要比处理器个数少2个及以上</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_79">
+                   <property name="text">
+                    <string>资源生命周期：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLineEdit" name="maxLifeTime2Edit">
+                   <property name="toolTip">
+                    <string>资源生命周期，包括纹理、Mesh</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QLabel" name="label_80">
+                   <property name="text">
+                    <string>每帧渲染时间限制：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QLineEdit" name="maxFrameTime2Edit">
+                   <property name="toolTip">
+                    <string>每一帧渲染时间限制</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QLabel" name="label_81">
+                   <property name="text">
+                    <string>更新时间限制：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QLineEdit" name="updateInterval2Edit">
+                   <property name="toolTip">
+                    <string>更新时间限制，时间越大更新越慢</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="computerPerformance2Edit">
+                   <property name="toolTip">
+                    <string>模型显示效果性能，分为low、normal、high</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>2</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="enableHigherConfigBtn">
+                <property name="text">
+                 <string>启用高级配置</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="configCancelBtn">
+          <property name="text">
+           <string>取消</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="configOKBtn">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>确定</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="configApplyBtn">
+          <property name="text">
+           <string>应用</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>308</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

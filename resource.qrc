@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>resources/bubble.png</file>
+        <file>resources/cloud.png</file>
+        <file>resources/welcome.png</file>
+        <file>resources/close_bubble.png</file>
+        <file>resources/bubble1.png</file>
+        <file>resources/config.ini</file>
+        <file>resources/config_background.jpg</file>
+        <file>resources/tool_icon.png</file>
+        <file>resources/config_setup.ico</file>
+    </qresource>
+</RCC>
